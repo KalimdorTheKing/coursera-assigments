@@ -1,0 +1,8 @@
+<h3>Title: {{ list.title }}</h3>
+<ol>
+  <li ng-repeat="item in list.items">
+    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+    <span style="font-weight: bold">{{ item.short_name }}, {{ item.name }},</span> <br><span style="font-size: 9pt; font-style: italic">{{ item.description }}</span>
+  </li>
+</ol>
+<div style="color: red" ng-if="list.emptyResultMessage">{{ list.emptyResultMessage }}</div>
