@@ -60,6 +60,8 @@
     ctrl.removeItem = function (itemIndex)
     {
       ctrl.foundItems.splice(itemIndex, 1);
+      if(ctrl.foundItems.length == 0)
+        ctrl.emptyResultMessage = "Nothing found";
     };
   }
 
